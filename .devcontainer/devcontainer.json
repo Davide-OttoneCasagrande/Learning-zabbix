@@ -1,0 +1,40 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+  "name": "Python 3",
+  //Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/workspace",
+  //Features to add to the dev container. More info: https://containers.dev/features.
+  //"features": {},
+
+  //Use 'forwardPorts' to make a list of ports inside the container available locally.
+  //"forwardPorts": [],
+
+  //Use 'postCreateCommand' to run commands after the container is created.
+  //"postCreateCommand": "pip3 install --user -r requirements.txt",
+
+  //Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-toolsai.datawrangler", //this require pandas to be installed (is in the dockerfile)
+        "cweijan.dbclient-jdbc",
+        "hediet.debug-visualizer", //debugger visualizer
+        "mechatroner.rainbow-csv",
+        "janisdd.vscode-edit-csv",
+        "irongeek.vscode-env",
+        "ms-toolsai.jupyter", //jupyter notebook for testing and prototyping
+        "ms-vscode.powershell", //bettere CLI
+        "valiantsin.operatormonodarktheme", //better theme
+        "usernamehw.errorlens", //Improve highlighting of errors, warnings and other language diagnostics.
+        "bierner.markdown-mermaid", // marmaid support for markdown
+        "bpruitt-goddard.mermaid-markdown-syntax-highlighting", // marmaid syntax highligth support
+        "mermaidchart.vscode-mermaid-chart", // marmaid editor
+      ]
+    }
+  }
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
